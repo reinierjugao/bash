@@ -33,13 +33,6 @@
 
 echo "Starting Script..."
 
-IFS='
-'
-
-# get current date
-dt=$(date '+%Y_%m_%d')
-#echo $dt
-
 # get current user
 user=`whoami`
 
