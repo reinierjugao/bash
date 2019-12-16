@@ -106,9 +106,9 @@ _copyfile() {
         # keep original file, copy only
         if [ $TESTMODE -eq 1 ];
         then
-            echo "cp -p $SRC $DESTPATH"
+            echo "cp -p -u $SRC $DESTPATH"
         else
-            cp -p $SRC $DESTPATH
+            cp -p -u $SRC $DESTPATH
         fi
     else
         # do not keep original file, delete source
@@ -176,9 +176,9 @@ do
                 echo "Copying from $DIR/$f to $SYNCDIR/$FILENAME"
                 if [ $TESTMODE -eq 1 ];
                 then
-                    cp -p $DIR/$f $SYNCDIR/$FILENAME
+                    cp -p -u $DIR/$f $SYNCDIR/$FILENAME
                 else
-                    echo "cp -p $DIR/$f $SYNCDIR/$FILENAME"
+                    echo "cp -p -u $DIR/$f $SYNCDIR/$FILENAME"
                 fi
             fi
         fi
